@@ -1,0 +1,20 @@
+        <!--pet Image-->
+        <!--pet Image click collapse the image-->
+        <a class="pet-grid__pet" ng-hide="showme" ng-click="showme=true">
+            <img class="pet-grid__img" src="{{dog.image}}" sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
+        </a>
+        <a class="pet-grid__pet" ng-show="showme" ng-click="showme=false">
+            show image
+        </a>
+        <!--pet Meta-->
+        <div class="pet-grid__meta">
+            <!--Title click should redirect to the pet-details section. Remember to pass along the pet id so you can make an api call
+        to get the specific pet details-->
+            <h3 class="pet-grid__name" ui-sref="bio({id: dog.id})"><a>{{dog.name}}</a></h3>
+
+            <!--pet Breed-->
+            <h4 class="pet-grid__sub">{{dog.breed}}</h4>
+
+            <!--pet Age-->
+            <div class="pet-grid__price">{{dog.age}}in dog years</div>
+        </div>
